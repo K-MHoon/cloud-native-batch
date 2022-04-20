@@ -1,6 +1,8 @@
 package com.example.cloudnativebatch.configuration;
 
 import com.example.cloudnativebatch.listener.DownloadingJobExecutionListener;
+import com.example.cloudnativebatch.processor.EnrichmentProcessor;
+import com.example.cloudnativebatch.vo.Foo;
 import lombok.RequiredArgsConstructor;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.JobExecutionListener;
@@ -57,7 +59,7 @@ public class JobConfiguration {
             System.out.println("resource = " + resource.getURI());
             resources.add(resource);
         }
-        reader.setResources(resources);
+        reader.setResources(resources.toArray(new Resource[resources.size()]));
         return reader;
     }
 

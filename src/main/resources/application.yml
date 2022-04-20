@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    hikari:
+      jdbc-url: jdbc:mariadb://localhost:3307/cloud_native_batch?useUnicode=true&characterEncoding=utf8
+      username:
+      password:
+      driver-class-name: org.mariadb.jdbc.Driver
+cloud:
+  aws:
+    credentials:
+      accessKey:
+      secretKey:
+    region:
+    static:
+    auto:
+
+job:
+  resource-path: s3://spring-native-batch/inputs/*.csv

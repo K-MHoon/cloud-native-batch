@@ -3,6 +3,7 @@ package com.example.cloudnativebatch.listener;
 import lombok.RequiredArgsConstructor;
 import org.springframework.batch.core.JobExecution;
 import org.springframework.batch.core.listener.JobExecutionListenerSupport;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.ResourcePatternResolver;
@@ -12,10 +13,10 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-@RequiredArgsConstructor
 public class DownloadingJobExecutionListener extends JobExecutionListenerSupport {
 
-    private final ResourcePatternResolver resourcePatternResolver;
+    @Autowired
+    private ResourcePatternResolver resourcePatternResolver;
 
     @Value("${job.resource-path}")
     private String path;
