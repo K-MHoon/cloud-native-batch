@@ -1,4 +1,4 @@
-package com.example.cloudnativebatch.vo;
+package com.example.mainbatch.vo;
 
 import lombok.Getter;
 import lombok.Setter;

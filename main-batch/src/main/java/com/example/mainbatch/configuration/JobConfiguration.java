@@ -1,8 +1,8 @@
-package com.example.cloudnativebatch.configuration;
+package com.example.mainbatch.configuration;
 
-import com.example.cloudnativebatch.listener.DownloadingJobExecutionListener;
-import com.example.cloudnativebatch.processor.EnrichmentProcessor;
-import com.example.cloudnativebatch.vo.Foo;
+import com.example.mainbatch.listener.DownloadingJobExecutionListener;
+import com.example.mainbatch.processor.EnrichmentProcessor;
+import com.example.mainbatch.vo.Foo;
 import lombok.RequiredArgsConstructor;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.JobExecutionListener;

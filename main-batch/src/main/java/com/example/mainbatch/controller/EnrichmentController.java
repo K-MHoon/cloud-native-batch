@@ -1,4 +1,4 @@
-package com.example.cloudnativebatch.controller;
+package com.example.mainbatch.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,8 +10,11 @@ public class EnrichmentController {
 
     @GetMapping("/enrich")
     public String enrich() {
-        this.count++;
-
-        return String.format("Enriched %s", this.count);
+        if(Math.random() > .5) {
+            throw new RuntimeException("I screwed up");
+        } else {
+            this.count++;
+            return String.format("Enriched %s", this.count);
+        }
     }
 }

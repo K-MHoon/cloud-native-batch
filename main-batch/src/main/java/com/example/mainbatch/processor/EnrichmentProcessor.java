@@ -1,6 +1,6 @@
-package com.example.cloudnativebatch.processor;
+package com.example.mainbatch.processor;
 
-import com.example.cloudnativebatch.vo.Foo;
+import com.example.mainbatch.vo.Foo;
 import org.springframework.batch.item.ItemProcessor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpMethod;
