@@ -5,6 +5,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>main-batch</module>
+        <module>config-service</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -75,6 +76,11 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter</artifactId>
+            <version>3.1.0</version>
         </dependency>
     </dependencies>
 
